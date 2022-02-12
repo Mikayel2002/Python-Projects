@@ -6,8 +6,6 @@ import json
 with open("images.json") as json_file:
     data = json.load(json_file)
 
-print(data)
-
 
 def download_images(name, url):
     with open("{}.jpg".format(name), "wb") as image:

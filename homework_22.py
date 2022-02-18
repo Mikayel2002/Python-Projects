@@ -1,5 +1,4 @@
 import json
-import requests
 
 
 def login_check(func: callable) -> callable:

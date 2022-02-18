@@ -22,18 +22,8 @@ def login_check(func: callable) -> callable:
 
 
 @login_check
-def download_images(name, url):
-    with open("{}.jpg".format(name), "wb") as image:
-        try:
-            response = requests.get(url)
-        except Exception as err:
-            print("Something happened {}".format(err))
-
-        if response.status_code == 200:
-            image.write(response.content)
-            print("Image {} is downloaded".format(name))
-        else:
-            raise Exception("Something went wrong!")
+def hello(name):
+    return "Hello {}".format(name)
 
 
-download_images("new_image", "https://www.w3.org/MarkUp/Test/xhtml-print/20050519/tests/jpeg420exif.jpg")
+print(hello("Mikayel"))
